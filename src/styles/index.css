@@ -10,3 +10,84 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #F2F2F2;
+}
+
+.todo-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #EAE1E1;
+    font-weight: 100;
+    font-size: 100px;
+}
+
+.todo-list {    
+    background-color: white;
+    width: 30%;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    border-radius: 0 !important;
+}
+
+
+input {
+    border: none;
+}
+
+.todo-list-input {
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+p {
+    color: gray;
+    margin: 0;
+}
+
+.todo-list-card-effect1 {
+    background-color: white;
+    width: 29.5%;
+    height: 4px;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list-card-effect2 {
+    background-color: white;
+    width: 29%;
+    height: 4px;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list-card-effect3 {
+    background-color: white;
+    width: 28.5%;
+    height: 4px;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}

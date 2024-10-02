@@ -58,12 +58,18 @@ input:focus {
 
 .footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 12px;
+    padding-right: 3%;
     padding-left: 3%;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+button {
+    background-color: #EAE1E1;
+    border-color: #D4ADAD;
+    color: gray;
 }
 
 p {

@@ -15,14 +15,33 @@ const Home = () => {
 		.then(response => {
 			console.log(response.ok);
 			console.log(response.status);
+			if (response.status === 404) {
+				createUser();
+			} 
 			return response.json();
 		})	
 		.then(data => {
-			setTasks(data.todos);
-			console.log(data);
+        	setTasks(data.todos);
 		})	
 		.catch(error => console.log('Error on GET request: ', error))
+
 	}, [])
+
+	function createUser() {
+		fetch('https://playground.4geeks.com/todo/users/vinkavladislavic', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+		.then(response => {
+			console.log(response.ok);
+			console.log(response.status);
+			return response.json();
+		})	
+		.then(data => console.log(data))
+		.catch(error => console.log("Error creating user:", error))
+	}
 
 	function keyDownFunction(e) {
 		if(todo.trim() === "") {
@@ -84,6 +103,7 @@ const Home = () => {
 			console.log(response.status);
 			if (response.ok) {
 				setTasks([]);
+				createUser();
 			} else {
 				console.error("Failed to clear all tasks");
 			}
